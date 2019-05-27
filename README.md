@@ -1,10 +1,12 @@
 # flutter_hamburger_scaffold
 
+[![pub](https://img.shields.io/pub/v/flutter_hamburger_scaffold.svg)](https://pub.dev/packages/flutter_hamburger_scaffold)
+
 Material Hamburger Scaffold Dedicated for flutter desktop applications
 
 ## Installation
 
-First, add `flutter_hamburger_scaffold` as a [dependency in your pubspec.yaml
+First, add `flutter_hamburger_scaffold` as a dependency in your pubspec.yaml
 
 ### Example
 
