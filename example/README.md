@@ -2,15 +2,43 @@
 
 Demonstrates how to use the hamburger_scaffold package
 
-## Getting Started
+### Example
 
-This project is a starting point for a Flutter application.
+``` dart
+import 'package:flutter_hamburger_scaffold/flutter_hamburger_scaffold.dart';
 
-A few resources to get you started if this is your first Flutter project:
+class Home extends StatefulWidget{
+  @override
+  _HomeState createState() => _HomeState();
+}
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+class _HomeState extends State<Home> {
+  Widget _widget;
+  List<HamburgerMenuItem> _menuItems = [new HamburgerMenuItem('Inbox', Icons.inbox, new Inbox()),new HamburgerMenuItem('Starred', Icons.star, new Starred()),new HamburgerMenuItem('Snoozed', Icons.snooze, new Snoozed())];
+  @override
+  void initState() {
+    _widget = _menuItems[0].child;
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context) {
+    return HamburgerScaffold(
+      appBarTitle: Text('Gmail'.toUpperCase(),style: TextStyle(letterSpacing: 5,fontWeight: FontWeight.w300),),
+      centerTitle: true,
+      body: _widget,
+      hamburgerMenu: new HamburgerMenu(
+        onClick: (Widget widget){
+          setState(() {
+            _widget = widget;
+          });
+        },
+        indicatorColor: Colors.white,
+        selectedColor: Theme.of(context).primaryColor,
+        unselectedColor: Colors.white,
+        children: _menuItems,
+      ),
+      backgroundColor: Theme.of(context).primaryColor,
+    );
+  }
+}
+```

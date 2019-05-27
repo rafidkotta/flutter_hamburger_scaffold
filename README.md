@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return HamburgerScaffold(
-      appBarTitle: Text('gypsy erp'.toUpperCase(),style: TextStyle(letterSpacing: 5,fontWeight: FontWeight.w300),),
+      appBarTitle: Text('Gmail'.toUpperCase(),style: TextStyle(letterSpacing: 5,fontWeight: FontWeight.w300),),
       centerTitle: true,
       body: _widget,
       hamburgerMenu: new HamburgerMenu(
