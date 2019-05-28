@@ -31,6 +31,7 @@ class _HomeState extends State<Home> {
     return HamburgerScaffold(
       appBarTitle: Text('Gmail'.toUpperCase(),style: TextStyle(letterSpacing: 5,fontWeight: FontWeight.w300),),
       centerTitle: true,
+      expandable:
       body: _widget,
       hamburgerMenu: new HamburgerMenu(
         onClick: (Widget widget){

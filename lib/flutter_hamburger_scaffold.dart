@@ -10,6 +10,7 @@ class HamburgerScaffold extends StatefulWidget {
   final Color backgroundColor;
   final double menuWidth;
   final Widget appBarBottom;
+  final bool expandable;
   final List<Widget> appBarActions;
   HamburgerScaffold(
       {Key key,
@@ -20,7 +21,8 @@ class HamburgerScaffold extends StatefulWidget {
       this.appBarTitle,
       this.centerTitle,
       this.appBarActions,
-      this.appBarBottom})
+      this.appBarBottom,
+      this.expandable})
       : super(key: key);
   @override
   _HamburgerScaffoldState createState() => _HamburgerScaffoldState();
@@ -44,9 +46,11 @@ class _HamburgerScaffoldState extends State<HamburgerScaffold> {
         actions: widget.appBarActions != null ? widget.appBarActions : [],
         leading: InkWell(
             onTap: () {
-              setState(() {
-                _isExpanded ? _isExpanded = false : _isExpanded = true;
-              });
+              if((widget.expandable != null && widget.expandable) || widget.expandable == null){
+                setState(() {
+                  _isExpanded ? _isExpanded = false : _isExpanded = true;
+                });
+              }
             },
             child: Icon(Icons.menu)),
       ),
