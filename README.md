@@ -4,6 +4,10 @@
 
 Material Hamburger Scaffold Dedicated for flutter desktop applications
 
+![Hamburger Scaffold demo desktop](https://thumbs.gfycat.com/ComplexSentimentalGraywolf-size_restricted.gif)
+
+![Hamburger Scaffold demo mobile](https://thumbs.gfycat.com/TameEarnestFennecfox-size_restricted.gif)
+
 ## Installation
 
 First, add `flutter_hamburger_scaffold` as a dependency in your pubspec.yaml
