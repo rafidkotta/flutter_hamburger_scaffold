@@ -1,3 +1,7 @@
+## [0.1.0+1]
+
+* pub optimizations v3
+
 ## [0.1.0]
 
 * optional parameter expandable added
