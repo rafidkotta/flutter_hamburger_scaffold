@@ -46,7 +46,8 @@ class _HamburgerScaffoldState extends State<HamburgerScaffold> {
         actions: widget.appBarActions != null ? widget.appBarActions : [],
         leading: InkWell(
             onTap: () {
-              if((widget.expandable != null && widget.expandable) || widget.expandable == null){
+              if ((widget.expandable != null && widget.expandable) ||
+                  widget.expandable == null) {
                 setState(() {
                   _isExpanded ? _isExpanded = false : _isExpanded = true;
                 });
